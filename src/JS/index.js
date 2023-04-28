@@ -8,5 +8,7 @@ monthNames.forEach((month) => {
 });
 
 //**  Add/Remove Active Day **//
-
 addRemoveActiveDay();
+
+//**  Mark in loacl storage **//
+addClassMarked();

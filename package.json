@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/index.css -o ./dist/index.css --watch --minify"
+    "dev": "npx tailwindcss -i ./src/index.css -o ./dist/index.css --watch "
   },
   "repository": {
     "type": "git",

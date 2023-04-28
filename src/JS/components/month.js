@@ -10,7 +10,7 @@ function renderAllDaysOfMonth(month, numOfDays) {
 function renderMonthContainer(month) {
   return `
   <!--*  ${month.toUpperCase()} [START] *-->
-  <div id="month-${month}" class="group bg-red-400">
+  <div id="month-${month}" class="group ">
   <h2
     class="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
     ${month.slice(0, 3)}
