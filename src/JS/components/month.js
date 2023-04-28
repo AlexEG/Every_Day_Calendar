@@ -25,7 +25,7 @@ function renderMonthContainer(month) {
 
 const monthNames = [
   ["January", 31],
-  ["February", 20],
+  ["February", 28],
   ["March", 31],
   ["April", 30],
   ["May", 31],

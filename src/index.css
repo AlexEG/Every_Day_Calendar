@@ -7,3 +7,25 @@
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 
 }
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 0;
+  background-color: black;
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(0deg, hsla(261, 100%, 20%, 0.69), transparent);
+  border-radius: 100vw;
+
+}
+
+body::-webkit-scrollbar-thumb {
+  background: hsla(261, 100%, 20%, 0.69);
+  border: 0.05em solid hsla(261, 100%, 50%, 0.69);
+  border-radius: 100vw;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: hsla(261, 100%, 50%, 0.69);
+}

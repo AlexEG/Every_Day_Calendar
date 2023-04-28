@@ -44,7 +44,7 @@
         <!--*** Accont ***-->
         <div
           id="accountImgSidebar"
-          class="relative flex h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950 md:w-14"
+          class="relative flex h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950"
         >
           <!-- Account Profile Image  -->
           <div class="h-8 w-8 rounded-full bg-cover bg-center"></div>
@@ -65,7 +65,7 @@
         </div>
         <!--*** Home ***-->
         <div
-          class="flex h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950 md:w-14"
+          class="flex h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@
         <!--*** Settinges ***-->
 
         <div
-          class="settinges flex h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950 md:w-14"
+          class="settinges flex h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@
         <!--*** Light/Dark Mode ***-->
         <div
           id="lightDarkMode"
-          class="flex h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950 md:w-14"
+          class="flex h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@
 
         <!--*** Share Manga ***-->
         <div
-          class="hidden h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950 md:flex md:w-14"
+          class="hidden h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950 md:flex"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -147,9 +147,10 @@
             />
           </svg>
         </div>
-        <!--*** Add Calender ***-->
+        <!--*** Add Calendar ***-->
         <div
-          class="hidden h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950 md:flex md:w-14"
+          id="add-calendar"
+          class="hidden h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 hover:text-slate-950 md:flex"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -169,13 +170,80 @@
         <!-- ---------  -->
         <div class="bg-slate-200 h-0.5"></div>
         <!-- New Calendars Here  -->
+        <!-- ---------  -->
+        <!-- Calendar-[1] -->
+        <div
+          class="h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 md:flex md:w-14 text-2xl relative group"
+        >
+          <span class="group-hover:text-slate-950 group-hover:font-bold"
+            >1</span
+          >
+          <!-- Calendar Title  -->
+          <div
+            class="absolute text-xs h-full w-auto left-14 bg-slate-950 px-2 whitespace-nowrap group-hover:opacity-80 invisible group-hover:visible opacity-0 duration-1000 transition-opacity"
+          >
+            <div class="h-full w-full flex items-center font-semibold">
+              <span>Solve one leetcode problem</span>
+            </div>
+          </div>
+        </div>
       </aside>
       <!--* SIDEBAR [END] *-->
+
+      <!-- {Add Calendar Input Container} [START] -->
+      <section
+        id="add-calendar-input"
+        class="w-full h-full top-0 left-0 fixed z-10 hidden"
+      >
+        <div class="w-full h-full">
+          <!-- overly -->
+          <div class="bg-black opacity-70 w-full h-full"></div>
+
+          <div
+            class="bg-slate-950 rounded-sm top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute w-1/2 h-28 flex justify-center items-center"
+          >
+            <!-- Close Add Calendar Input Container btn  -->
+            <button
+              id="close-add-new-calendar-btn"
+              class="absolute right-2 top-2 z-50 rounded-sm text-white transition-colors hover:bg-gray-200 hover:text-slate-950"
+            >
+              <svg
+                class="h-7 w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <input
+              class="bg-transparent border-indigo-600 border-2 rounded-md py-1 pl-2 focus-within:outline-none placeholder:opacity-30 focus-within:border-indigo-400 transition-colors text-white duration-300 w-60"
+              type="text"
+              placeholder="Calendar Title"
+            />
+            <!-- SAVE btn  -->
+            <button
+              class="text-indigo-100 text-center font-semibold px-4 py-1 border-2 rounded-md ml-3 border-indigo-600 hover:text-indigo-600 transition-colors duration-300 hover:border-indigo-100 hover:bg-indigo-100 active:opacity-90"
+            >
+              SAVE
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- {Add Calendar Input Container} [END] -->
       <!--! ROOT  !-->
     </div>
     <script src="./src/JS/components/day.js"></script>
     <script src="./src/JS/components/month.js"></script>
     <script src="./src/JS/days-localstorage.js"></script>
+    <script src="./src/JS/components/new-calendar.js"></script>
     <script src="./src/JS/index.js"></script>
   </body>
 </html>

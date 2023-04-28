@@ -12,3 +12,6 @@ addRemoveActiveDay();
 
 //**  Mark in loacl storage **//
 addClassMarked();
+
+// //**  SIDEBAR ADD NEW CALENDAR **//
+// sideBar.innerHTML += addNewHabit(2, "Learn a new thing");
