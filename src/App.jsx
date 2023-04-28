@@ -1,6 +1,8 @@
 import DayBtn from "./components/DayBtn";
 import Header from "./components/Header";
-{
+import DataMonths from "./components/DataMonths";
+
+function addRemoveActiveDay() {
   document.querySelectorAll("button").forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.classList.contains("opacity-50")) {
@@ -17,460 +19,147 @@ import Header from "./components/Header";
     });
   });
 }
+
+addRemoveActiveDay();
 function App() {
+  // Days Components
+  const JanuaryDays = DataMonths[0]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`January${item}`} />;
+  });
+  const februaryDays = DataMonths[1]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`february${item}`} />;
+  });
+  const marchDays = DataMonths[2]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`march${item}`} />;
+  });
+  const aprilDays = DataMonths[3]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`april${item}`} />;
+  });
+  const mayDays = DataMonths[4]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`may${item}`} />;
+  });
+  const juneDays = DataMonths[5]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`june${item}`} />;
+  });
+  const julyDays = DataMonths[6]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`july${item}`} />;
+  });
+  const augustDays = DataMonths[7]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`august${item}`} />;
+  });
+  const septemberDays = DataMonths[8]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`september${item}`} />;
+  });
+  const octoberDays = DataMonths[9]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`october${item}`} />;
+  });
+  const novamberDays = DataMonths[10]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`novamber${item}`} />;
+  });
+  const decemberDays = DataMonths[11]["days"].map((item) => {
+    return <DayBtn title={`${item}`} key={`december${item}`} />;
+  });
+
+  // --------------------------------------- //
   return (
     <>
       <Header />
       <div className="bg-black min-h-screen flex flex-col px-7">
         <main className="flex justify-center gap-4 py-4 ">
-          {/* January  */}
-          <div>
-            <h2 className="text-gold2 opacity-50 font-semibold text-center  mb-2">
+          {/* January */}
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               jan
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
-            <DayBtn title="31" />
+            {JanuaryDays}
           </div>
-          {/* February  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+
+          {/* February */}
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               feb
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
+            {februaryDays}
           </div>
-          {/* March  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+
+          {/* March */}
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               mar
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
-            <DayBtn title="31" />
+            {marchDays}
           </div>
-          {/* April  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+
+          {/* April */}
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               apr
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
+            {aprilDays}
           </div>
-          {/* May  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+
+          {/* May */}
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               may
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
-            <DayBtn title="31" />
+            {mayDays}
           </div>
+
           {/* June  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               jun
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
+            {juneDays}
           </div>
+
           {/* July  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               jul
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
-            <DayBtn title="31" />
+            {julyDays}
           </div>
+
           {/* August  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               aug
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
-            <DayBtn title="31" />
+            {augustDays}
           </div>
+
           {/* September  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               sep
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
+            {septemberDays}
           </div>
+
           {/* October  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               oct
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
-            <DayBtn title="31" />
+            {octoberDays}
           </div>
+
           {/* November  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               nov
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
+            {novamberDays}
           </div>
+
           {/* December  */}
-          <div>
-            <h2 className="text-gold2 opacity-50  font-semibold text-center  mb-2">
+          <div className="group">
+            <h2 className="text-gold2 opacity-50 font-semibold text-center mb-2 transition-opacity group-hover:opacity-80">
               dec
             </h2>
-
-            <DayBtn title="1" />
-            <DayBtn title="2" />
-            <DayBtn title="3" />
-            <DayBtn title="4" />
-            <DayBtn title="5" />
-            <DayBtn title="6" />
-            <DayBtn title="7" />
-            <DayBtn title="8" />
-            <DayBtn title="9" />
-            <DayBtn title="10" />
-            <DayBtn title="11" />
-            <DayBtn title="12" />
-            <DayBtn title="13" />
-            <DayBtn title="14" />
-            <DayBtn title="15" />
-            <DayBtn title="16" />
-            <DayBtn title="17" />
-            <DayBtn title="18" />
-            <DayBtn title="19" />
-            <DayBtn title="20" />
-            <DayBtn title="21" />
-            <DayBtn title="22" />
-            <DayBtn title="23" />
-            <DayBtn title="24" />
-            <DayBtn title="25" />
-            <DayBtn title="26" />
-            <DayBtn title="27" />
-            <DayBtn title="28" />
-            <DayBtn title="29" />
-            <DayBtn title="30" />
-            <DayBtn title="31" />
+            {decemberDays}
           </div>
         </main>
       </div>
