@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/favicon/favicon.ico" /> -->
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon-32x32.png" />
+    <link
+      rel="shortcut icon"
+      href="./favicon/favicon.png"
+      type="image/x-icon"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="AlexEG" />
     <meta
@@ -11,9 +14,24 @@
       content="This calendar helps keep you on track with your healthy habits. Set a goal that you want to reach each day, and tap the day to light it up when it's accomplished. It's like getting a daily gold star sticker, but fancier."
     />
     <title>Every Day Calendar</title>
+    <link rel="stylesheet" href="./dist/index.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="root" class="bg-black w-full min-h-screen">
+      <!--* Calendar Container  *-->
+
+      <!-- ------------- -->
+      <div class="min-h-screen flex flex-col px-7">
+        <main class="flex justify-center gap-4 py-4">
+          <!-- //**  RENDER CALENDER **// -->
+        </main>
+      </div>
+      <!-- ------------- -->
+    </div>
+
+    <script src="./src/JS/components/day.js"></script>
+    <script src="./src/JS/components/month.js"></script>
+    <script src="./src/JS/days-localstorage.js"></script>
+    <script src="./src/JS/index.js"></script>
   </body>
 </html>
