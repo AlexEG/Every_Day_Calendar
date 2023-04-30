@@ -22,9 +22,17 @@
 
       <!--* HEADER  [START] *-->
       <header
-        class="w-full h-7 text-center bg-gradient-to-l from-transparent bg-slate-950"
+        class="w-full h-7 flex justify-center items-center bg-gradient-to-l from-transparent bg-slate-950 relative"
       >
-        <span class="text-white font-semibold">Solve one leetcode problem</span>
+        <span class="text-slate-50 font-semibold"
+          >Solve one leetcode problem</span
+        >
+        <div class="absolute right-2 h-full flex items-center gap-3">
+          <time datetime="00:00" class="text-slate-300 font-medium text-xs"
+            >00:00 AM</time
+          >
+          <h3 class="text-slate-50 font-medium text-sm">DAY 0000</h3>
+        </div>
       </header>
       <!--* HEADER  [END] *-->
 
@@ -39,7 +47,7 @@
       <!--* Calendar Container [END] *-->
 
       <!--* SIDEBAR [START] *-->
-      <aside class="fixed top-0 left-0 h-full bg-slate-950 text-white">
+      <aside class="fixed w-14 top-0 left-0 h-full bg-slate-950 text-white">
         <!-- ICONS -->
         <!--*** Accont ***-->
         <div
@@ -171,22 +179,11 @@
         <div class="bg-slate-200 h-0.5"></div>
         <!-- New Calendars Here  -->
         <!-- ---------  -->
-        <!-- Calendar-[1] -->
+
         <div
-          class="h-14 cursor-pointer items-center justify-center transition duration-300 hover:bg-slate-200 md:flex md:w-14 text-2xl relative group"
-        >
-          <span class="group-hover:text-slate-950 group-hover:font-bold"
-            >1</span
-          >
-          <!-- Calendar Title  -->
-          <div
-            class="absolute text-xs h-full w-auto left-14 bg-slate-950 px-2 whitespace-nowrap group-hover:opacity-80 invisible group-hover:visible opacity-0 duration-1000 transition-opacity"
-          >
-            <div class="h-full w-full flex items-center font-semibold">
-              <span>Solve one leetcode problem</span>
-            </div>
-          </div>
-        </div>
+          id="new-habits-container"
+          class="h-[calc(100%-336px)] w-full overflow-y-auto overflow-x-hidden"
+        ></div>
       </aside>
       <!--* SIDEBAR [END] *-->
 
@@ -227,9 +224,11 @@
               class="bg-transparent border-indigo-600 border-2 rounded-md py-1 pl-2 focus-within:outline-none placeholder:opacity-30 focus-within:border-indigo-400 transition-colors text-white duration-300 w-60"
               type="text"
               placeholder="Calendar Title"
+              value=""
             />
             <!-- SAVE btn  -->
             <button
+              id="add-new-calendar-save-btn"
               class="text-indigo-100 text-center font-semibold px-4 py-1 border-2 rounded-md ml-3 border-indigo-600 hover:text-indigo-600 transition-colors duration-300 hover:border-indigo-100 hover:bg-indigo-100 active:opacity-90"
             >
               SAVE
@@ -245,5 +244,8 @@
     <script src="./src/JS/days-localstorage.js"></script>
     <script src="./src/JS/components/new-calendar.js"></script>
     <script src="./src/JS/index.js"></script>
+    <!-- HEADER  -->
+    <script src="./src/JS/header/clock.js"></script>
+    <script src="./src/JS/header/how-old-am-i.js"></script>
   </body>
 </html>
