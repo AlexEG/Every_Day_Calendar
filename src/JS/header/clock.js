@@ -4,7 +4,7 @@ function headerClock() {
   let h = date.getHours(); // 0 - 23
   let m = date.getMinutes(); // 0 - 59
   document
-    .querySelector("#root > header > div > time")
+    .querySelector("#root > header > div > div > time")
     .setAttribute("datetime", `${h}:${m}`);
   let session = "AM";
   if (h == 0) {
@@ -19,7 +19,8 @@ function headerClock() {
 
   const time = `${h}:${m} ${session}`;
   setTimeout(headerClock, 60000);
-  document.querySelector("#root > header > div > time").textContent = time;
+  document.querySelector("#root > header > div > div > time").textContent =
+    time;
 }
 
 headerClock();

@@ -17,6 +17,7 @@ function addRemoveActiveDay() {
         btn
           .querySelector(" div > div > div > div > span")
           .classList.add("brightness-0");
+        markedVsUnmarked();
       } else {
         console.log("day unmarked");
         btn.classList.add("opacity-50");
@@ -30,6 +31,7 @@ function addRemoveActiveDay() {
         btn
           .querySelector(" div > div > div > div > span")
           .classList.remove("brightness-0");
+        markedVsUnmarked();
       }
     });
   });

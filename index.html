@@ -21,18 +21,83 @@
       <!--! ROOT  !-->
 
       <!--* HEADER  [START] *-->
-      <header
-        class="w-full h-7 flex justify-center items-center bg-gradient-to-l from-transparent bg-slate-950 relative"
-      >
-        <span class="text-slate-50 font-semibold"
-          >Solve one leetcode problem</span
+      <header class="pl-14">
+        <!-- calendar title && clock && how old you in days  -->
+        <div
+          class="h-7 flex justify-center items-center bg-gradient-to-l from-transparent bg-slate-950 relative"
         >
-        <div class="absolute right-2 h-full flex items-center gap-3">
-          <time datetime="00:00" class="text-slate-300 font-medium text-xs"
-            >00:00 AM</time
+          <span class="text-slate-50 font-semibold"
+            >Solve one leetcode problem</span
           >
-          <h3 class="text-slate-50 font-medium text-sm">DAY 0000</h3>
+          <div class="absolute right-2 h-full flex items-center gap-3">
+            <time datetime="00:00" class="text-slate-300 font-medium text-xs"
+              >00:00 AM</time
+            >
+            <h3 class="text-slate-50 font-medium text-sm">DAY 0000</h3>
+          </div>
         </div>
+
+        <!-- Statistic -->
+        <section class="py-2 h-20 flex justify-around">
+          <!--* Longest Streak && Current Streak  -->
+
+          <div>
+            <span class="text-slate-200 font-semibold">Current Streak</span>
+            <p class="text-center font-bold text-lg text-slate-100">5</p>
+            <p
+              class="text-center font-semibold text-xs text-slate-100 opacity-50"
+            >
+              May 1 - Today
+            </p>
+          </div>
+
+          <div class="h-full flex justify-around">
+            <div id="longest-streak">
+              <span class="text-slate-200 font-semibold">Longest Streak</span>
+              <p class="text-center font-bold text-lg text-slate-100">13</p>
+              <p
+                class="text-center font-semibold text-xs text-slate-100 opacity-50"
+              >
+                <span>Feb 12</span>
+                -
+                <span>Feb 25</span>
+              </p>
+            </div>
+          </div>
+
+          <!--* Marked VS Unmarked && Days Left -->
+          <div id="marked-vs-unmarked" class="text-slate-200 text-center">
+            <p class="text-slate-200 font-semibold">Marked VS Unmarked</p>
+
+            <p>
+              <span class="text-center font-bold text-lg text-green-800"
+                >0%</span
+              >
+              |
+              <span class="text-center font-bold text-lg text-red-800">0%</span>
+            </p>
+
+            <span
+              class="text-center font-semibold text-xs text-slate-100 opacity-50"
+              >0</span
+            >
+            |
+            <span
+              class="text-center font-semibold text-xs text-slate-100 opacity-50"
+              >0</span
+            >
+          </div>
+
+          <!-- how many days left -->
+          <div id="days-left" class="text-slate-200 text-center">
+            <p class="text-slate-200 font-semibold">Days Left</p>
+            <p class="text-center font-bold text-lg text-slate-100">0%</p>
+            <span
+              class="text-center font-semibold text-xs text-slate-100 opacity-50"
+              >0</span
+            >
+          </div>
+        </section>
       </header>
       <!--* HEADER  [END] *-->
 
@@ -177,13 +242,10 @@
         </div>
         <!-- ---------  -->
         <div class="bg-slate-200 h-0.5"></div>
-        <!-- New Calendars Here  -->
         <!-- ---------  -->
-
-        <div
-          id="new-habits-container"
-          class="h-[calc(100%-336px)] w-full overflow-y-auto overflow-x-hidden"
-        ></div>
+        <div id="new-habits-container" class="h-[calc(100%-336px)] w-full">
+          <!-- New Habits Here  -->
+        </div>
       </aside>
       <!--* SIDEBAR [END] *-->
 
@@ -236,6 +298,7 @@
           </div>
         </div>
       </section>
+
       <!-- {Add Calendar Input Container} [END] -->
       <!--! ROOT  !-->
     </div>
@@ -243,9 +306,19 @@
     <script src="./src/JS/components/month.js"></script>
     <script src="./src/JS/days-localstorage.js"></script>
     <script src="./src/JS/components/new-calendar.js"></script>
-    <script src="./src/JS/index.js"></script>
     <!-- HEADER  -->
     <script src="./src/JS/header/clock.js"></script>
     <script src="./src/JS/header/how-old-am-i.js"></script>
+    <script src="./src/JS/header/change-header-title.js"></script>
+    <script src="./src/JS/header/days-left.js"></script>
+    <script src="./src/JS/header/marked-vs-unmarked.js"></script>
+
+    <!-- SIDEBAR  -->
+    <script src="./src/JS/sidebar/add-habit/plus-habit-input.js"></script>
+    <script src="./src/JS/sidebar/add-habit/new-habit-html.js"></script>
+    <script src="./src/JS/sidebar/add-habit/save-habit.js"></script>
+    <script src="./src/JS/sidebar/add-habit/add-to-sidebar.js"></script>
+    <!-- -----  -->
+    <script src="./src/JS/index.js"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@ function howOldAmI(year, month, day) {
   const old = now - birth;
 
   document.querySelector(
-    "#root > header > div > h3"
+    "#root > header > div > div > h3"
   ).innerHTML = `DAY ${Math.trunc(old / 8.64e7)}`;
 }
 

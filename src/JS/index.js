@@ -14,4 +14,9 @@ addRemoveActiveDay();
 addClassMarked();
 
 // //**  SIDEBAR ADD NEW CALENDAR **//
-// sideBar.innerHTML += addNewHabit(2, "Learn a new thing");
+
+// //** change Calendar title  **//
+changeCalendarTitle();
+
+// HEADER //
+markedVsUnmarked();
