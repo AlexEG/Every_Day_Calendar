@@ -20,3 +20,5 @@ changeCalendarTitle();
 
 // HEADER //
 markedVsUnmarked();
+
+LongestStreak();
